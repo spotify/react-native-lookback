@@ -35,6 +35,7 @@ static NSString * const LookbackBridgeProjectId = @"projectId";
 static NSString * const LookbackBridgeStudyId = @"studyId";
 static NSString * const LookbackBridgeAllowSavingPreviewsAsDrafts = @"allowSavingPreviewsAsDrafts";
 static NSString * const LookbackBridgeAllowResumeRecordingFromPreview = @"allowResumeRecordingFromPreview";
+static NSString * const LookbackBridgeAutomaticallyRecordViewControllerNames = @"automaticallyRecordViewControllerNames"
 static NSString * const LookbackBridgeUpdateLookbackSetting = @"updateLookbackSetting";
 static NSString * const LookbackBridgeOnStartedUpload = @"onStartedUpload";
 
