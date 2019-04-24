@@ -1,0 +1,144 @@
+
+# react-native-lookback
+
+## What is this?
+
+This package allows you to use the [Lookback](https://lookback.io) user testing utilities in your *React Native* projects.
+Using Lookback will let you live stream your app to observers as users interact with it, record sessions and upload them for later viewing, 
+and moderate and engage with your users while they're testing your app.
+
+## Platforms
+
+The Lookback SDK is only supported on iOS.
+
+## Installation
+
+Download React Native Lookback in your React Native project from GitHub using:
+
+    npm install git+ssh://git@github.com/spotify/react-native-lookback --save
+
+### Mostly automatic installation
+
+#### _Requires [Cocoapods](https://cocoapods.org/)_
+
+1. Setup CocoaPods. If you **don't** have a Podfile for your app already, in your project folder run:
+
+   ```
+   cd ios && pod init
+   ```
+
+2. Add the CocoaPod specs
+   
+   - In your App's `Podfile` add the **React Native Lookback** podspec
+        ```ruby
+        pod 'RNLookback', :path => '../node_modules/react-native-lookback/RNLookback.podspec'
+        ```
+   - Add the subspec for **React** and it's dependencies in your `Podfile` to the locally installed CocoaPods, as the normal [React CocoaPod](https://cocoapods.org/pods/react) is out of date.
+       ```ruby
+       pod 'DoubleConversion', :podspec => '../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec'
+       pod 'glog', :podspec => '../node_modules/react-native/third-party-podspecs/glog.podspec'
+       pod 'Folly', :podspec => '../node_modules/react-native/third-party-podspecs/Folly.podspec'
+       pod 'yoga', :path => '../node_modules/react-native/ReactCommon/yoga'
+       pod 'React', :path => '../node_modules/react-native',
+          :subspecs => [
+              'Core',
+              'CxxBridge'
+          ]
+       ```
+1. In your iOS folder run 
+   ```
+   pod install
+   ```
+1. Open your newly created _`Project`_`.xcworkspace` (**not** your existing _`Project`_`.xcodeproj`)
+2. Run your project (`Cmd+R`)
+
+## Configuration
+
+To use Lookback Participate (recommended), you need to set up your app to handle links from Lookback.
+
+1. Go to lookback.io and get your project's App Prefix. It will be something like:
+
+        'lookback-appname'
+    
+    It's generated for you when you register a new app for testing.
+
+2. Add your App Prefix to your App's URL Types [following Apple's documentation for adding a custom url scheme.](https://developer.apple.com/documentation/uikit/core_app/allowing_apps_and_websites_to_link_to_your_content/defining_a_custom_url_scheme_for_your_app?language=objc)
+    ![Xcode Setup](docs/xcode-urltype.png)
+4. Set the Privacy keys in your Info.plist file for Microphone and Camera access for your app.
+
+    ![Xcode Setup](docs/xcode-privacy.png)
+    Apps that don't use the camera or microphone can use these descriptions which are [specific to Lookback](https://help.lookback.io/installing-the-ios-sdk/configuring-lookback/configuring-lookback-participate):
+
+    - NSCameraUsageDescription: Lookback uses the camera to record you during user research studies
+    - NSMicrophoneUsageDescription: Lookback uses the microphone to record you during user research studies
+
+3. Ensure that you have React Native [linking setup](https://facebook.github.io/react-native/docs/linking) so that your React Native App can handle incoming links. 
+
+
+   In AppDelegate.m you should have:
+
+   ```obj-c
+    #import <React/RCTLinkingManager.h>
+
+    @implementation
+
+    // The rest of your App Delegate here...
+
+    /**
+    Allow React Native to respond to links that target this app.
+    */
+      - (BOOL)application:(UIApplication *)application
+         openURL:(NSURL *)url
+         options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options
+      {
+        return [RCTLinkingManager application:application openURL:url options:options];
+      }
+
+    @end
+   ```
+
+   Once this is in place `react-native-lookback` will be able to intercept Participate links.
+## Usage
+
+### Lookback Participate
+
+Register your URL Scheme with Lookback Participate to allow Lookback to respond to Participate urls. For more info, [see Lookback Participate features](https://lookback.io/features/) such as Live sessions and Self-Testing sessions.
+
+```javascript
+import Lookback from 'react-native-lookback';
+// Tell Lookback what your url scheme is
+Lookback.setupParticipate('myproject-lookback');
+```
+That's it! Now your App is ready to join live sessions or run self-test sessions.
+
+* * *
+
+### Lookback Recorder
+
+If you want to programatically control Lookback, you must configure Lookback with your app token instead of using Participate. Your app token is found in your Organization settings on your lookback.io dashboard.
+
+```javascript
+import Lookback from 'react-native-lookback'
+
+// Initialise Lookback
+Lookback.setupWithAppToken('myapptoken');
+/**
+ * Some possible uses:
+ */
+// Turn on shake to record
+Lookback.shakeToRecord = true;
+// Or show the Lookback feedback bubble
+Lookback.feedbackVisible = true;
+// Or show the Lookback recorder view
+Lookback.recorderVisible = true;
+```
+
+### Lookback Recorder API
+{{>main}}
+
+
+## Code of Conduct
+
+This project adheres to the [Open Code of Conduct][code-of-conduct]. By participating, you are expected to honor this code.
+
+[code-of-conduct]: https://github.com/spotify/code-of-conduct/blob/master/code-of-conduct.md
