@@ -15,7 +15,7 @@
   "license": "APACHE 2.0",
   "main": "index.js",
   "peerDependencies": {
-    "react-native": "^0.41.2"
+    "react-native": ">=0.41.2"
   },
   "scripts": {
     "docs": "jsdoc2md --template docs/README.hbs --files index.js > README.md"
