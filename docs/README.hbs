@@ -28,6 +28,7 @@ Download React Native Lookback in your React Native project from GitHub using:
    ```
 
 2. Add the CocoaPod specs
+In your App's `Podfile` add
    - Minimum OS Version
         ```ruby
         platform :ios, '10.0'
