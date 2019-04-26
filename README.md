@@ -28,10 +28,13 @@ Download React Native Lookback in your React Native project from GitHub using:
    ```
 
 2. Add the CocoaPod specs
-   
+   - Minimum OS Version
+        ```ruby
+        platform :ios, '10.0'
+        ```
    - In your App's `Podfile` add the **React Native Lookback** podspec
         ```ruby
-        pod 'RNLookback', :path => '../node_modules/react-native-lookback/RNLookback.podspec'
+        pod 'react-native-lookback', :path => '../node_modules/react-native-lookback/react-native-lookback.podspec'
         ```
    - Add the subspec for **React** and it's dependencies in your `Podfile` to the locally installed CocoaPods, as the normal [React CocoaPod](https://cocoapods.org/pods/react) is out of date.
        ```ruby
