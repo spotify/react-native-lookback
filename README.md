@@ -1,15 +1,26 @@
 
 # react-native-lookback
 
+[![npm](https://img.shields.io/npm/v/react-native-lookback.svg)](https://www.npmjs.com/package/react-native-lookback)
+[![npm](https://img.shields.io/npm/dt/react-native-lookback.svg)](https://www.npmjs.com/package/react-native-lookback)
+[![npm](https://img.shields.io/npm/l/react-native-lookback.svg)](https://github.com/spotify/react-native-lookback/blob/master/LICENSE)
+
 ## What is this?
 
-This package allows you to use the [Lookback](https://lookback.io) user testing utilities in your *React Native* projects.
+This package allows you to use the [Lookback](https://lookback.io) user testing utilities in your **React Native** projects.
 Using Lookback will let you live stream your app to observers as users interact with it, record sessions and upload them for later viewing, 
 and moderate and engage with your users while they're testing your app.
 
+### Previous Versions
+
+This repo contains the library starting at version 3.0. 
+Prior versions were built by @negativetwelve and can be found [here](https://github.com/negativetwelve/react-native-lookback).
+
 ## Platforms
 
-The Lookback SDK is only supported on iOS.
+The Lookback SDK is only supported on iOS v10 or greater.
+
+To use Lookback on Android see the [Lookback Participate App](https://lookback.io/features/participate/)
 
 ## Installation
 
@@ -266,6 +277,10 @@ Set up Lookback Recorder
 | --- | --- | --- |
 | setting | <code>Object</code> | Key-Value pair of the updated setting |
 
+
+## Contributing
+
+This repo follows the [git-flow]() principles
 
 
 ## Code of Conduct

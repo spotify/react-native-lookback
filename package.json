@@ -1,7 +1,7 @@
 {
   "name": "react-native-lookback",
   "version": "3.0.2",
-  "author": "Sam Thorne",
+  "author": "Sam Thorne <samthorne@spotify.com>",
   "deprecated": false,
   "description": "React Native wrapper for Lookback",
   "devDependencies": {
@@ -12,7 +12,8 @@
     "react-native",
     "Lookback"
   ],
-  "license": "APACHE 2.0",
+  "repository": "github:spotify/react-native-lookback",
+  "license": "Apache-2.0",
   "main": "index.js",
   "peerDependencies": {
     "react-native": ">=0.41.2"
