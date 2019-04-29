@@ -280,7 +280,8 @@ Set up Lookback Recorder
 
 ## Contributing
 
-This repo follows the [git-flow]() principles
+This repo follows the [git-flow](https://nvie.com/posts/a-successful-git-branching-model/) principles of 
+having a Develop branch to open Feature branches against and a Master branch for releases. If you open a pull request, it should be against Develop *not Master*
 
 
 ## Code of Conduct
