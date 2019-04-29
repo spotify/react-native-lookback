@@ -14,7 +14,7 @@ and moderate and engage with your users while they're testing your app.
 ### Previous Versions
 
 This repo contains the library starting at version 3.0. 
-Prior versions were built by @negativetwelve and can be found [here](https://github.com/negativetwelve/react-native-lookback).
+Prior versions were built by [@negativetwelve](https://github.com/negativetwelve) and can be found [here](https://github.com/negativetwelve/react-native-lookback).
 
 ## Platforms
 
