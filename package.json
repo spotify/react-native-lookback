@@ -1,6 +1,6 @@
 {
   "name": "react-native-lookback",
-  "version": "3.0.2",
+  "version": "3.0.3",
   "author": "Sam Thorne <samthorne@spotify.com>",
   "deprecated": false,
   "description": "React Native wrapper for Lookback",
