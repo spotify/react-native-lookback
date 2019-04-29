@@ -14,7 +14,7 @@ and moderate and engage with your users while they're testing your app.
 ### Previous Versions
 
 This repo contains the library starting at version 3.0. 
-Prior versions were built by @negativetwelve and can be found [here](https://github.com/negativetwelve/react-native-lookback).
+Prior versions were built by [@negativetwelve](https://github.com/negativetwelve) and can be found [here](https://github.com/negativetwelve/react-native-lookback).
 
 ## Platforms
 
@@ -26,7 +26,7 @@ To use Lookback on Android see the [Lookback Participate App](https://lookback.i
 
 Download React Native Lookback in your React Native project from GitHub using:
 
-    npm install git+ssh://git@github.com/spotify/react-native-lookback --save
+    npm install react-native-lookback --save
 
 ### Mostly automatic installation
 
