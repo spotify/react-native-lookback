@@ -3,7 +3,7 @@
 
 [![npm](https://img.shields.io/npm/v/react-native-lookback.svg)](https://www.npmjs.com/package/react-native-lookback)
 [![npm](https://img.shields.io/npm/dt/react-native-lookback.svg)](https://www.npmjs.com/package/react-native-lookback)
-[![npm](https://img.shields.io/npm/l/react-native-lookback.svg)](https://github.com/spotify/react-native-lookback/blob/master/LICENSE)
+
 
 ## What is this?
 
@@ -26,7 +26,7 @@ To use Lookback on Android see the [Lookback Participate App](https://lookback.i
 
 Download React Native Lookback in your React Native project from GitHub using:
 
-    npm install git+ssh://git@github.com/spotify/react-native-lookback --save
+    npm install react-native-lookback --save
 
 ### Mostly automatic installation
 
