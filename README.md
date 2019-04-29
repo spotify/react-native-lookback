@@ -3,7 +3,7 @@
 
 [![npm](https://img.shields.io/npm/v/react-native-lookback.svg)](https://www.npmjs.com/package/react-native-lookback)
 [![npm](https://img.shields.io/npm/dt/react-native-lookback.svg)](https://www.npmjs.com/package/react-native-lookback)
-[![npm](https://img.shields.io/npm/l/react-native-lookback.svg)](https://github.com/spotify/react-native-lookback/blob/master/LICENSE)
+[![npm](https://img.shields.io/github/license/spotify/react-native-lookback.svg)](https://github.com/spotify/react-native-lookback/blob/master/LICENSE)
 
 ## What is this?
 
